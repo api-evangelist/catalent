@@ -26,6 +26,10 @@ apis:
     description: >-
       The Catalent API provides access to platform services and data for enterprise integration and automation.
 common:
+  - type: GitHubOrganization
+    url: https://github.com/catalent-data-science-community
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/catalent
   - type: Website
     url: https://www.catalent.com
 maintainers:
