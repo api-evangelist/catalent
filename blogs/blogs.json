@@ -1,0 +1,14 @@
+{
+  "repo": "catalent",
+  "feeds": [
+    {
+      "source": "https://www.catalent.com/catalent-news/",
+      "feed_url": "https://www.catalent.com/feed/",
+      "title": "",
+      "saved": 1,
+      "method": "discovered"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 7
+}
