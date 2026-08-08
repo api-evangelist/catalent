@@ -2,10 +2,6 @@
   "repo": "catalent",
   "feeds": [
     {
-      "source": "https://www.catalent.com/feed/",
-      "error": "HTTPError"
-    },
-    {
       "source": "https://www.catalent.com/catalent-news/",
       "feed_url": "https://www.catalent.com/catalent-news/",
       "title": "",
@@ -13,6 +9,6 @@
       "method": "none"
     }
   ],
-  "fetched": "2026-08-01T15:49:00Z",
+  "fetched": "2026-08-06T14:08:46Z",
   "post_count": 17
 }
