@@ -1,0 +1,277 @@
+generated: '2026-09-19'
+method: probed
+source: live GET probes, 2026-09-19 (browser User-Agent)
+note: 'Every named /.well-known/ path plus the APIs.json root paths were probed on all four hosts the record knows:
+  the registrable domain, www, the legacy clinical.catalent.com host, and the Salesforce Experience Cloud tenant
+  catalent.my.site.com that hosts the OneHub customer portal. The two hosts named by the prior record, developer.catalent.com
+  and api.catalent.com, do not exist in DNS (NXDOMAIN) and could not be probed. NOTHING CATALENT-AUTHORED WAS SERVED:
+  every path on catalent.com/www 404s, clinical.catalent.com either 404s or 308s onto the www 404, and catalent.my.site.com
+  is a Salesforce Sites catch-all that 301s every path onto a /FeedbackSurveyvforcesite/ prefix and then answers
+  401. The single 200 is the Salesforce platform''s tenant OIDC discovery document, which every Experience Cloud
+  site serves (its scopes_supported are Salesforce''s own: pardot_api, einstein_gpt_api, wave_api). It is saved
+  verbatim for the record but marked counts: false and NO WellKnown pointer is emitted, because the pointer asserts
+  that the PROVIDER publishes a developer discovery surface and this document is platform-authored, describes Salesforce''s
+  authorization server for a login-gated customer portal, and sits on a host Catalent does not own. No SecurityTxt
+  pointer either: no security.txt was served anywhere. The negative-control path 404s on the three Catalent hosts,
+  so those are true misses rather than a catch-all masking a real surface.'
+hit_count: 0
+platform_authored_hits: 1
+path_echo_control: passed
+unresolvable_hosts:
+- host: developer.catalent.com
+  dns: NXDOMAIN
+- host: api.catalent.com
+  dns: NXDOMAIN
+- host: mcp.catalent.com
+  dns: NXDOMAIN
+- host: docs.catalent.com
+  dns: NXDOMAIN
+- host: developers.catalent.com
+  dns: NXDOMAIN
+hosts:
+- host: https://www.catalent.com
+  path_echo_control:
+    path: /.well-known/catalent-negative-control-7f3ab91c.json
+    status: 404
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog.json
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: https://catalent.com
+  path_echo_control:
+    path: /.well-known/catalent-negative-control-7f3ab91c.json
+    status: 404
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog.json
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: https://clinical.catalent.com
+  path_echo_control:
+    path: /.well-known/catalent-negative-control-7f3ab91c.json
+    status: 404
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 308
+    file: null
+    redirect: https://www.catalent.com/.well-known/openid-configuration
+    note: 308 to the same path on www.catalent.com, which 404s
+  - path: /.well-known/oauth-authorization-server
+    status: 308
+    file: null
+    redirect: https://www.catalent.com/.well-known/oauth-authorization-server
+    note: 308 to the same path on www.catalent.com, which 404s
+  - path: /.well-known/oauth-protected-resource
+    status: 308
+    file: null
+    redirect: https://www.catalent.com/.well-known/oauth-protected-resource
+    note: 308 to the same path on www.catalent.com, which 404s
+  - path: /.well-known/api-catalog
+    status: 308
+    file: null
+    redirect: https://www.catalent.com/.well-known/api-catalog
+    note: 308 to the same path on www.catalent.com, which 404s
+  - path: /.well-known/api-catalog.json
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  role: legacy Clinical Supply Services host; root 307s to www.catalent.com/pharma/clinical-supply
+- host: https://catalent.my.site.com
+  path_echo_control:
+    path: /.well-known/catalent-negative-control-7f3ab91c.json
+    status: 401
+    note: 301 to /FeedbackSurveyvforcesite/.well-known/catalent-negative-control-7f3ab91c.json then 401
+  documents:
+  - path: /.well-known/security.txt
+    status: 401
+    file: null
+    redirect: https://catalent.my.site.com/FeedbackSurveyvforcesite/.well-known/security.txt
+    note: 'Salesforce Sites catch-all: 301 to the /FeedbackSurveyvforcesite/ prefix, then 401 (no document)'
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: well-known/catalent-my-site-onehub-openid-configuration.json
+    redirect: https://catalent.my.site.com/FeedbackSurveyvforcesite/.well-known/openid-configuration
+    note: Salesforce platform OIDC discovery for the tenant, issuer https://catalent.my.site.com/FeedbackSurveyvforcesite;
+      the OneHub site variant (/onehub/.well-known/openid-configuration, issuer https://catalent.my.site.com/onehub)
+      is the one saved
+    authored_by: salesforce-platform
+    counts: false
+  - path: /.well-known/oauth-authorization-server
+    status: 401
+    file: null
+    redirect: https://catalent.my.site.com/FeedbackSurveyvforcesite/.well-known/oauth-authorization-server
+    note: 'Salesforce Sites catch-all: 301 to the /FeedbackSurveyvforcesite/ prefix, then 401 (no document)'
+  - path: /.well-known/oauth-protected-resource
+    status: 401
+    file: null
+    redirect: https://catalent.my.site.com/FeedbackSurveyvforcesite/.well-known/oauth-protected-resource
+    note: 'Salesforce Sites catch-all: 301 to the /FeedbackSurveyvforcesite/ prefix, then 401 (no document)'
+  - path: /.well-known/api-catalog
+    status: 401
+    file: null
+    redirect: https://catalent.my.site.com/FeedbackSurveyvforcesite/.well-known/api-catalog
+    note: 'Salesforce Sites catch-all: 301 to the /FeedbackSurveyvforcesite/ prefix, then 401 (no document)'
+  - path: /.well-known/api-catalog.json
+    status: 401
+    file: null
+    redirect: https://catalent.my.site.com/FeedbackSurveyvforcesite/.well-known/api-catalog.json
+    note: 'Salesforce Sites catch-all: 301 to the /FeedbackSurveyvforcesite/ prefix, then 401 (no document)'
+  - path: /.well-known/ai-plugin.json
+    status: 401
+    file: null
+    redirect: https://catalent.my.site.com/FeedbackSurveyvforcesite/.well-known/ai-plugin.json
+    note: 'Salesforce Sites catch-all: 301 to the /FeedbackSurveyvforcesite/ prefix, then 401 (no document)'
+  - path: /.well-known/ucp.json
+    status: 401
+    file: null
+    redirect: https://catalent.my.site.com/FeedbackSurveyvforcesite/.well-known/ucp.json
+    note: 'Salesforce Sites catch-all: 301 to the /FeedbackSurveyvforcesite/ prefix, then 401 (no document)'
+  - path: /.well-known/acp.json
+    status: 401
+    file: null
+    redirect: https://catalent.my.site.com/FeedbackSurveyvforcesite/.well-known/acp.json
+    note: 'Salesforce Sites catch-all: 301 to the /FeedbackSurveyvforcesite/ prefix, then 401 (no document)'
+  - path: /.well-known/aauth-resource.json
+    status: 401
+    file: null
+    redirect: https://catalent.my.site.com/FeedbackSurveyvforcesite/.well-known/aauth-resource.json
+    note: 'Salesforce Sites catch-all: 301 to the /FeedbackSurveyvforcesite/ prefix, then 401 (no document)'
+  - path: /.well-known/apis.json
+    status: 401
+    file: null
+    redirect: https://catalent.my.site.com/FeedbackSurveyvforcesite/.well-known/apis.json
+    note: 'Salesforce Sites catch-all: 301 to the /FeedbackSurveyvforcesite/ prefix, then 401 (no document)'
+  - path: /apis.json
+    status: 401
+    file: null
+    redirect: https://catalent.my.site.com/FeedbackSurveyvforcesite/apis.json
+    note: 'Salesforce Sites catch-all: 301 to the /FeedbackSurveyvforcesite/ prefix, then 401 (no document)'
+  - path: /apis.yml
+    status: 401
+    file: null
+    redirect: https://catalent.my.site.com/FeedbackSurveyvforcesite/apis.yml
+    note: 'Salesforce Sites catch-all: 301 to the /FeedbackSurveyvforcesite/ prefix, then 401 (no document)'
+  - path: /.well-known/agent-card.json
+    status: 401
+    file: null
+    redirect: https://catalent.my.site.com/FeedbackSurveyvforcesite/.well-known/agent-card.json
+    note: 'Salesforce Sites catch-all: 301 to the /FeedbackSurveyvforcesite/ prefix, then 401 (no document)'
+  - path: /.well-known/agent.json
+    status: 401
+    file: null
+    redirect: https://catalent.my.site.com/FeedbackSurveyvforcesite/.well-known/agent.json
+    note: 'Salesforce Sites catch-all: 301 to the /FeedbackSurveyvforcesite/ prefix, then 401 (no document)'
+  role: Salesforce Experience Cloud tenant hosting the login-gated OneHub customer portal (catalent.my.site.com/onehub/s/login/);
+    not a Catalent registrable domain

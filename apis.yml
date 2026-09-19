@@ -29,36 +29,99 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/catalent.p
 tags:
   - Pharmaceutical Services
   - Drug Delivery
+  - CDMO
+  - Biologics
+  - Cell and Gene Therapy
+  - Clinical Supply
+  - Consumer Health
+  - No Developer Program
 description: >-
-  Catalent is a major US corporation and Fortune 1000 company. The Catalent API provides programmatic access to its platform services, data, and integrations for enterprise customers and partners.
+  Catalent is a global pharmaceutical contract development and manufacturing organization (CDMO)
+  headquartered in Somerset, New Jersey, and owned by Novo Holdings since December 2024. It
+  develops, manufactures and supplies medicines and consumer health products for biopharma,
+  biotech and self-care brands across biologics, cell and gene therapy, oral and injectable dose
+  forms, clinical supply and consumer health, from roughly forty facilities. Catalent has no
+  developer program: it publishes no API, OpenAPI, SDK, package, MCP server or agent card, and the
+  developer.catalent.com and api.catalent.com hosts an earlier catalog record assumed do not exist
+  in DNS. Its only customer-facing software surface is the OneHub clinical-supply portal, a
+  login-gated Salesforce Experience Cloud site. It does publish a first-party llms.txt index of
+  its corporate site and a working privacy-request form; both are captured here, and nothing has
+  been authored on its behalf.
 created: '2026-04-19'
-modified: '2026-04-19'
+modified: '2026-09-19'
 specificationVersion: '0.23'
-apis:
-  - aid: catalent:catalent-api
-    name: Catalent API
-    tags:
-      - Pharmaceutical Services
-      - Drug Delivery
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://api.catalent.com
-    humanURL: https://developer.catalent.com
-    properties:
-      - url: https://developer.catalent.com/docs
-        type: Documentation
-    description: >-
-      The Catalent API provides access to platform services and data for enterprise integration and automation.
+apis: []
 common:
-  - type: DomainSecurity
-    url: security/catalent-domain-security.yml
-  - url: https://www.catalent.com/catalent-news/
-    type: Blog
+  - type: Website
+    url: https://www.catalent.com
+  - type: Blog
+    name: Catalent News
+    url: https://www.catalent.com/news
+  - type: Support
+    name: Contact Catalent
+    url: https://www.catalent.com/contact
+  - type: TermsOfService
+    name: Terms of Use
+    url: https://www.catalent.com/terms
+  - type: PrivacyPolicy
+    name: Privacy Policy
+    url: https://www.catalent.com/privacy-policy
   - type: GitHubOrganization
+    name: Catalent Data Science Community (3 tutorial repos, last push 2023)
     url: https://github.com/catalent-data-science-community
   - type: LinkedIn
     url: https://www.linkedin.com/company/catalent
-  - type: Website
-    url: https://www.catalent.com
+  - type: Twitter
+    url: https://x.com/Catalent_
+  - type: LLMsTxt
+    name: llms.txt (served at https://www.catalent.com/llms.txt, saved verbatim)
+    url: llms/catalent-llms.txt
+  - type: DataSubjectRequest
+    name: Privacy Request form — harvest record in regulatory/catalent-regulatory-posture.yml
+    url: https://www.catalent.com/privacy-request
+  - type: RegulatoryPosture
+    url: regulatory/catalent-regulatory-posture.yml
+  - type: Plans
+    name: Plans (none published — enterprise services contracts only)
+    url: plans/catalent-plans-pricing.yml
+  - type: RateLimits
+    name: Rate limits (none published — no public API)
+    url: rate-limits/catalent-rate-limits.yml
+  - type: DomainSecurity
+    url: security/catalent-domain-security.yml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-19'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Catalent is a pharmaceutical CDMO whose only software surface is the login-gated OneHub
+    clinical-supply portal on Salesforce Experience Cloud; the developer.catalent.com and
+    api.catalent.com hosts the prior record named do not exist in DNS, the 1,352-URL sitemap and
+    first-party llms.txt list no developer, API or integration page, every OpenAPI, .well-known,
+    agent-card and APIs.json discovery path 404s on www, apex and clinical.catalent.com, and no
+    package registry or first-party GitHub repo ships a client library.
+  evidence:
+    - url: https://developer.catalent.com/docs
+      status: 0
+    - url: https://api.catalent.com
+      status: 0
+    - url: https://www.catalent.com/developers
+      status: 404
+    - url: https://www.catalent.com/openapi.json
+      status: 404
+    - url: https://www.catalent.com/.well-known/api-catalog
+      status: 404
+    - url: https://www.catalent.com/.well-known/agent-card.json
+      status: 404
+    - url: https://www.catalent.com/llms.txt
+      status: 200
+    - url: https://catalent.my.site.com/onehub/s/login/
+      status: 200
+  checked: '2026-09-19'

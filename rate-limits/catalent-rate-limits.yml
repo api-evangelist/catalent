@@ -1,35 +1,28 @@
-specification: API Commons Rate Limits
-specificationVersion: '0.1'
-schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+generated: '2026-09-19'
+method: searched
+source: https://www.catalent.com/pharma/clinical-supply/onehub-portal
 provider: Catalent
 providerId: catalent
-created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
-reconciled: false
-tags:
-  - Pharmaceutical Services
-  - Drug Delivery
-  - Rate Limiting
-description: Catalent does not publish a public developer portal or rate-limit documentation. Any throttling
-  applied to client / EDI integrations is configured privately and not externally visible.
-notes: No public rate-limit documentation. Numeric defaults removed; consult Catalent project / IT contact
-  for negotiated throughput.
-sources:
-  - https://www.catalent.com
-responseCodes:
-  throttled: 429
-limits:
-  - name: Customer-negotiated limits
-    scope: contract
-    metric: varies
-    limit: see customer agreement
-policies:
-  - name: Backoff
-    description: Implement exponential backoff with jitter and honor any Retry-After header surfaced
-      by Catalent's integration gateway.
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+limit_count: 0
+limits: []
+response_headers: []
+exhaustion_status: null
+note: >-
+  No API rate limits are published because no public API exists to limit. Catalent is a
+  pharmaceutical CDMO with no developer portal, no API reference, and no OpenAPI; the
+  developer.catalent.com and api.catalent.com hosts a prior generated artifact assumed do not
+  resolve (NXDOMAIN). The only customer-facing software surface, the OneHub clinical-supply
+  portal, is a login-gated Salesforce Experience Cloud site whose IRT integrations are set up by
+  Catalent's team under contract, and it documents no request quota or X-RateLimit-* /
+  RateLimit-* / Retry-After behaviour. This file replaces a 2026-05-04 generated placeholder
+  that asserted a 429 throttle and a Retry-After header for an API that does not exist.
+searched:
+  - url: https://www.catalent.com/pharma/clinical-supply/onehub-portal
+    status: 200
+    result: portal marketing page; no rate-limit or API documentation
+  - url: https://www.catalent.com/llms.txt
+    status: 200
+    result: corporate site index; no developer or API section
+  - url: https://api.catalent.com
+    status: 0
+    result: NXDOMAIN

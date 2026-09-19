@@ -1,45 +1,32 @@
-specification: API Commons Plans
-specificationVersion: '0.1'
-schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+generated: '2026-09-19'
+method: searched
+source: https://www.catalent.com/contact
 provider: Catalent
 providerId: catalent
-created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
-reconciled: false
-tags:
-  - Pharmaceutical Services
-  - Drug Delivery
-description: Catalent, Inc. is a pharmaceutical contract development and manufacturing organization (CDMO).
-  No public developer portal or API pricing exists; the developer.catalent.com host referenced in apis.yml
-  does not resolve. Any client-system, EDI, or quality-data integration is contracted privately under
-  a master services agreement.
-notes: No public API pricing. Single placeholder plan reflecting customer / partner contracts. Replace
-  if Catalent publishes a developer portal.
-sources:
-  - https://www.catalent.com
-plans:
-  - id: catalent-customer-integration
-    name: Customer / Partner Integration (Contact Sales)
-    type: enterprise
-    description: Privately negotiated client integration for project tracking, quality data, regulatory
-      submissions, and supply-chain workflows.
-    entries:
-      - label: Customer integration access
-        name: customer_access
-        type: subscription
-        metric: contract
-        limit: -1
-        timeFrame: month
-        geo: global
-        unit: 1
-        price: contact sales
-        userMultiplied: false
-    elements:
-      - name: MSA-governed access
-      - name: Catalent API
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+plan_count: 0
+plans: []
+model: enterprise-quote
+note: >-
+  Catalent publishes no plans, list prices, or API pricing of any kind. It is a pharmaceutical
+  contract development and manufacturing organization (CDMO): every engagement — biologics,
+  cell and gene therapy, oral and injectable dose forms, clinical supply — is a privately
+  negotiated services contract, and every product page ends in "Talk to an expert" / "Request a
+  proposal" routed to the contact form. There is no developer portal, no API product, and
+  therefore no API tier to price: the developer.catalent.com and api.catalent.com hosts the
+  earlier generated placeholder assumed do not exist in DNS. The OneHub clinical-supply
+  customer portal is a feature of a signed supply contract, reached through a Salesforce
+  Experience Cloud login, not a purchasable plan. This file replaces a 2026-05-04 generated
+  placeholder that had invented a "Customer / Partner Integration" plan for a nonexistent API.
+searched:
+  - url: https://www.catalent.com/
+    status: 200
+    result: CDMO services site; no pricing page in the 1,352-URL sitemap
+  - url: https://www.catalent.com/contact
+    status: 200
+    result: sales contact form only
+  - url: https://www.catalent.com/pharma/clinical-supply/onehub-portal
+    status: 200
+    result: customer portal marketing page; access via Salesforce login, no plan or price
+  - url: https://developer.catalent.com
+    status: 0
+    result: NXDOMAIN

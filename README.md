@@ -64,20 +64,19 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Catalent is a major US corporation and Fortune 1000 company. The Catalent API provides programmatic access to its platform services, data, and integrations for enterprise customers and partners.
+Catalent is a global pharmaceutical contract development and manufacturing organization (CDMO) headquartered in Somerset, New Jersey, and owned by Novo Holdings since December 2024. It develops, manufactures and supplies medicines and consumer health products for biopharma, biotech and self-care brands across biologics, cell and gene therapy, oral and injectable dose forms, clinical supply and consumer health, from roughly forty facilities. Catalent has no developer program: it publishes no API, OpenAPI, SDK, package, MCP server or agent card, and the developer.catalent.com and api.catalent.com hosts an earlier catalog record assumed do not exist in DNS. Its only customer-facing software surface is the OneHub clinical-supply portal, a login-gated Salesforce Experience Cloud site. It does publish a first-party llms.txt index of its corporate site and a working privacy-request form; both are captured here, and nothing has been authored on its behalf.
 
 **URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/catalent/refs/heads/main/apis.yml)
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
 
 ## Tags:
 
- - Pharmaceutical Services, Drug Delivery
+ - Pharmaceutical Services, Drug Delivery, CDMO, Biologics, Cell and Gene Therapy, Clinical Supply, Consumer Health, No Developer Program
 
 ## Timestamps
 
 - **Created:** 2026-04-19
-- **Modified:** 2026-04-19
+- **Modified:** 2026-09-19
 
 ## Maintainers
 
