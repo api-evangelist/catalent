@@ -2,6 +2,13 @@
   "repo": "catalent",
   "feeds": [
     {
+      "source": "https://www.catalent.com",
+      "feed_url": "https://www.catalent.com",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
       "source": "https://www.catalent.com/catalent-news/",
       "feed_url": "https://www.catalent.com/catalent-news/",
       "title": "",
@@ -9,7 +16,7 @@
       "method": "none"
     }
   ],
-  "fetched": "2026-09-13T13:00:00Z",
+  "fetched": "2026-09-19T20:17:39Z",
   "post_count": 17,
   "feed_nature": "undetermined",
   "feed_nature_basis": null,
