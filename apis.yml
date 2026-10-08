@@ -52,6 +52,8 @@ modified: '2026-09-19'
 specificationVersion: '0.23'
 apis: []
 common:
+  - type: FinOps
+    url: finops/catalent-finops.yml
   - type: Website
     url: https://www.catalent.com
   - type: Blog
