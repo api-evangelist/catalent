@@ -28,3 +28,70 @@
     detected: '2026-10-20'
   status: not-a-workflow
   arazzo: null
+- slug: catalent-fda-drugs-fda-approved-drug-and-biologic-applications
+  label: FDA Drugs@FDA (approved drug and biologic applications)
+  partner_name: FDA Drugs@FDA (approved drug and biologic applications)
+  category: FDA drug / biologic application holder
+  type: contract
+  channel: regulator-register
+  evidence: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=073229
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: Drugs@FDA (openFDA drug/drugsfda; application holder = sponsor_name)
+    standard: FDA drug / biologic marketing application (21 CFR 314 / 601)
+    spec_file: null
+    role: fda-application-holder
+    registered_name: CATALENT
+    matched_domain: catalent.com
+    matched_by: domain
+    certified_products:
+    - product: Abbreviated New Drug Application (generic, approved) (Drugs@FDA)
+      product_type: ANDA
+      lapsed: false
+      products_sample:
+      - CETIRIZINE HYDROCHLORIDE ALLERGY
+      - NAPROXEN SODIUM
+      - VALPROIC ACID
+    applications_sample:
+    - ANDA073229
+    - ANDA202807
+    - ANDA213105
+    signal_note: certified_products = one entry per application TYPE (NDA / ANDA / BLA), never per application;
+      lapsed when every product under the type is Discontinued. Applications are context, never counted
+    detected_by: sweep-clinical-trial-sponsors.py
+    detected: '2026-10-21'
+    identity: wikidata Q59535969 'Catalent (United Kingdom)' P856 https://www.catalent.com/index.php
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  status: not-a-workflow
+  arazzo: null
+- slug: catalent-clinicaltrials-gov-industry-trial-sponsors-and-collaborators
+  label: ClinicalTrials.gov (industry trial sponsors and collaborators)
+  partner_name: ClinicalTrials.gov (industry trial sponsors and collaborators)
+  category: Interventional trial sponsor / collaborator
+  type: register
+  channel: standard-directory
+  evidence: https://clinicaltrials.gov/study/NCT06383273
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: ClinicalTrials.gov API v2 (interventional, started >= 2021-01-01, industry lead sponsor or collaborator)
+    standard: null
+    spec_file: null
+    role: trial-collaborator
+    registered_name: Catalent
+    matched_domain: catalent.com
+    matched_by: domain
+    lead_sponsor: false
+    active_trial: false
+    latest_start: '2024-05-01'
+    trials_sample:
+    - NCT06383273
+    signal_note: 'PARTICIPATION only (a trial is not an approval): lead_sponsor, active_trial and latest_start are
+      per-edge signals; the number of trials is never counted'
+    detected_by: sweep-clinical-trial-sponsors.py
+    detected: '2026-10-21'
+    identity: wikidata Q59535969 'Catalent (United Kingdom)' P856 https://www.catalent.com/index.php
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  status: not-a-workflow
+  arazzo: null
